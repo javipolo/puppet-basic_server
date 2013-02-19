@@ -1,4 +1,4 @@
-# javipolo's puppet basit server
+# javipolo's puppet basic server
 All stuff I usualy install on new provisioned machines
 
 Dependencies:
