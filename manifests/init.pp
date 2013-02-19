@@ -19,7 +19,7 @@ class basic_server {
 
     # Link to .vimrc
     file { '/root/.vimrc':
-      update => true,
+      # update => true,
       ensure => link,
       target => '/root/.vim/vimrc',
     }
