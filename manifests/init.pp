@@ -7,4 +7,20 @@ class basic_server {
     # System tools
     package { lvm2: ensure => installed }
     package { xfsprogs: ensure => installed }
+
+    # Git everywhere
+    include git
+
+    # javipolo's vimrc
+    git::repo{'javipolo-vim':
+      path   => '/root/.vim',
+      source => 'https://github.com/javipolo/vim.git',
+    }
+
+    # Link to .vimrc
+    file { '/root/.vimrc':
+      ensure => link,
+      target => '/root/.vim/vimrc',
+    }
+
 }
