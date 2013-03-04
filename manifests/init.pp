@@ -8,6 +8,7 @@ class basic_server {
 
     # System tools
     package { lvm2: ensure => installed }
+    package { rsync: ensure => installed }
     package { xfsprogs: ensure => installed }
 
     ## Vim + config for root
